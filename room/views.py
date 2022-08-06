@@ -8,4 +8,8 @@ class RoomViewSet(viewsets.ModelViewSet):
     serializer_class = RoomSerializer
     # permission_classes = [IsAuthenticated]
     http_method_names = ['get', 'post']
+    lookup_field = 'slug'
+    extra_kwargs = {
+        'url': {'lookup_field': 'slug'}
+    }
 
