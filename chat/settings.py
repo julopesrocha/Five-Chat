@@ -56,8 +56,8 @@ SOCIALACCOUNT_PROVIDERS = {
         # (``socialaccount`` app) containing the required client
         # credentials, or list them here:
         'APP': {
-            'client_id': '123',
-            'secret': '456',
+            'client_id': '698434833530-nsla2m20i6u7id8dftjih5n42ang0ogh.apps.googleusercontent.com',
+            'secret': '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',
             'key': ''
         }
     }
@@ -89,6 +89,14 @@ TEMPLATES = [
             ],
         },
     },
+]
+
+AUTHENTICATION_BACKENDS = [
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
 WSGI_APPLICATION = 'chat.wsgi.application'
