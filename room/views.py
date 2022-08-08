@@ -12,4 +12,5 @@ class RoomViewSet(viewsets.ModelViewSet):
     extra_kwargs = {
         'url': {'lookup_field': 'slug'}
     }
-
+    # room = Room.objects.get(slug=name)
+    # messages = Message.objects.filter(room=room)[0:25]
