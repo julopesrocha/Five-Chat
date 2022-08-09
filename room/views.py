@@ -1,7 +1,7 @@
 from rest_framework import viewsets
 
 from .serializers import RoomSerializer
-from .models import Room
+from .models import Message, Room
 
 class RoomViewSet(viewsets.ModelViewSet):
     queryset = Room.objects.all()
@@ -12,5 +12,5 @@ class RoomViewSet(viewsets.ModelViewSet):
     extra_kwargs = {
         'url': {'lookup_field': 'slug'}
     }
-    # room = Room.objects.get(slug=name)
+    # room = Room.objects.get(slug=queryset)
     # messages = Message.objects.filter(room=room)[0:25]
